@@ -1,0 +1,20 @@
+[package]
+name = "proto-vps-switcher"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.96"
+description = "Minimal TUI for switching between SSH VPS connections."
+license = "GPL v3"
+authors = ["Marc <contact@marcariza.com>"]
+
+[dependencies]
+anyhow = "1.0"
+crossterm = "0.29"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
