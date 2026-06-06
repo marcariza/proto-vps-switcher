@@ -40,7 +40,10 @@ pub struct Messages {
     pub esc_to_cancel: &'static str,
     pub any_to_return: &'static str,
     pub and: &'static str,
-
+    pub settings_menu: &'static str,
+    pub settings_one: &'static str,
+    pub settings_two: &'static str,
+    pub settings_three: &'static str,
 }
 
 impl Messages {
@@ -93,6 +96,10 @@ impl Messages {
             esc_to_cancel: "Press 'Esc' to cancel this operation.",
             any_to_return: "Press any key to return.",
             and: "and",
+            settings_menu: "Settings",
+            settings_one: "Setting 1",
+            settings_two: "Setting 2",
+            settings_three: "Setting 3",
         }
     }
 
@@ -137,6 +144,10 @@ impl Messages {
             esc_to_cancel: "Pulsa 'Esc' para cancelar esta operación.",
             any_to_return: "Pulsa cualquier tecla para volver.",
             and: "y",
+            settings_menu: "Opciones",
+            settings_one: "Opción 1",
+            settings_two: "Opción 2",
+            settings_three: "Opción 3",
         }
     }
 
@@ -181,6 +192,10 @@ impl Messages {
             esc_to_cancel: "Pressiona 'Esc' per cancel·lar aquesta operació.",
             any_to_return: "Pressiona qualsevol botó per tornar.",
             and: "i",
+            settings_menu: "Configuració",
+            settings_one: "Opció 1",
+            settings_two: "Opció 2",
+            settings_three: "Opció 3",
         }
     }
 

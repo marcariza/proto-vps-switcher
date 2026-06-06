@@ -4,6 +4,7 @@ mod i18n;
 mod ssh;
 mod ui;
 pub mod helper;
+pub mod modules;
 
 use anyhow::Result;
 
