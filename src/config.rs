@@ -18,16 +18,18 @@ pub struct ConnectionStore {
 pub enum Language {
     #[default]
     English,
-    Spanish,
+    SpanishSpain,
     Catalan,
+    PortuguesePortugal,
 }
 
 impl Language {
     pub fn choices() -> &'static [(Language, &'static str)] {
         &[
             (Language::English, "English"),
-            (Language::Spanish, "Español"),
+            (Language::SpanishSpain, "Español (España)"),
             (Language::Catalan, "Català"),
+            (Language::PortuguesePortugal, "Português (Portugal)"),
         ]
     }
 }

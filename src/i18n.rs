@@ -47,8 +47,9 @@ impl Messages {
     pub fn for_language(language: Language) -> Self {
         match language {
             Language::English => Self::english(),
-            Language::Spanish => Self::spanish(),
+            Language::SpanishSpain => Self::spanish_spain(),
             Language::Catalan => Self::catalan(),
+            Language::PortuguesePortugal => Self::portuguese_portugal(),
         }
     }
 
@@ -96,9 +97,9 @@ impl Messages {
         }
     }
 
-    pub fn spanish() -> Self {
+    pub fn spanish_spain() -> Self {
         Self {
-            language: Language::Spanish,
+            language: Language::SpanishSpain,
             title: "Proto VPS Switcher",
             main_menu_title: "Menú principal",
             select_connection_menu: "Seleccionar conexión",
@@ -184,22 +185,69 @@ impl Messages {
         }
     }
 
+    pub fn portuguese_portugal() -> Self {
+        Self {
+            language: Language::PortuguesePortugal,
+            title: "Proto VPS Switcher",
+            main_menu_title: "Menu principal",
+            select_connection_menu: "Selecionar conexão",
+            add_connection_menu: "Adicionar nova conexão",
+            delete_connection_menu: "Excluir conexão existente",
+            change_language_menu: "Alterar idioma",
+            exit_menu: "Sair",
+            name_header: "Nome",
+            host_header: "Host",
+            user_header: "Usuário",
+            port_header: "Porta",
+            auth_header: "Método de autenticação",
+            add_title: "Adicionar conexão VPS",
+            name: "Nome",
+            host: "Host",
+            user: "Usuário",
+            port: "Porta",
+            key_path: "Caminho do arquivo de chave",
+            password: "Senha",
+            language_title: "Alterar idioma",
+            language_saved: "Idioma salvo.",
+            delete_title: "Excluir conexão",
+            select_title: "Selecionar conexão",
+            no_connections: "Não há conexões adicionadas ainda.",
+            required_field: "Este campo é obrigatório.",
+            invalid_port: "A porta deve ser um número entre 1 e 65535.",
+            saved: "Salvo.",
+            connection_deleted: "Conexão excluída.",
+            no_connection_to_delete: "Não há conexões disponíveis para excluir.",
+            connect_failed: "Falha na conexão",
+            con_disconnected: "Desconectado de:",
+            about_menu: "Sobre",
+            about_version: "Versão:",
+            about_authors: "Feito por:",
+            about_license: "Publicado sob licença",
+            esc_to_cancel: "Pressione 'Esc' para cancelar esta operação.",
+            any_to_return: "Pressione qualquer tecla para retornar.",
+            and: "e",
+        }
+    }
+
     pub fn auth_label(&self, auth: &AuthConfig) -> &'static str {
         match auth {
             AuthConfig::InteractivePassword => match self.language {
                 Language::English => "password",
-                Language::Spanish => "contraseña",
+                Language::SpanishSpain => "contraseña",
                 Language::Catalan => "contrasenya",
+                Language::PortuguesePortugal => "senha",
             },
             AuthConfig::StoredPassword { .. } => match self.language {
                 Language::English => "stored password",
-                Language::Spanish => "contraseña guardada",
+                Language::SpanishSpain => "contraseña guardada",
                 Language::Catalan => "contrasenya desada",
+                Language::PortuguesePortugal => "senha salva",
             },
             AuthConfig::KeyFile { .. } => match self.language {
                 Language::English => "key file",
-                Language::Spanish => "fichero llave",
+                Language::SpanishSpain => "fichero llave",
                 Language::Catalan => "fitxer clau",
+                Language::PortuguesePortugal => "arquivo de chave",
             },
         }
     }
