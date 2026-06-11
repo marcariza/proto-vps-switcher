@@ -14,7 +14,7 @@ pub fn draw_shell(stdout: &mut Stdout, app: &App) -> Result<()> {
         Clear(ClearType::All),
         MoveTo(0, 0),
         SetBackgroundColor(Color::White),
-        SetForegroundColor(Color::Cyan),
+        SetForegroundColor(Color::DarkBlue),
         SetAttribute(Attribute::Bold),
         Print(app_title_with_version(app)),
         // Print("Swap test"),
