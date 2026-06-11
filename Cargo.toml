@@ -2,7 +2,7 @@
 name = "proto-vps-switcher"
 version = "0.1.0"
 edition = "2024"
-rust-version = "1.96"
+rust-version = "1.94"
 description = "Minimal TUI for switching between SSH VPS connections."
 license = "GPL v3"
 authors = ["Marc <contact@marcariza.com>"]
